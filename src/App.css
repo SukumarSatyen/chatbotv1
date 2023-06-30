@@ -1,38 +1,73 @@
 .App {
-  text-align: center;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  height: 100vh; /* Set height to 100% of the viewport height */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chat {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: flex-start; /* Align children to the left */
+  justify-content: flex-start; /* Align children to the top */
+  height: 80%; /* Set height to 80% of the parent container */
+  overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+  padding: 10px; /* Add padding */
+  width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-message {
+  background-color: #f2f2f2; /* Set background color */
+  color: black; /* Set text color */
+  align-self: flex-end; /* Align self to the right */
+  margin: 5px 0; /* Set top and bottom margin */
+  padding: 10px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+  max-width: 50%; /* Limit width to a maximum of 50% */
+  word-wrap: break-word; /* Break words if they exceed container width */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bot-message {
+ 
+  background-color: #4caf50; /* Set background color */
+  color: white; /* Set text color */
+  align-self: flex-start; /* Align self to the left */
+  margin: 5px 0; /* Set top and bottom margin */  
+  padding: 10px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+  max-width: 50%; /* Limit width to a maximum of 50% */
+  word-wrap: break-word; /* Break words if they exceed container width */
 }
 
-.App-link {
-  color: #61dafb;
+.input-container {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  width: 100%; /* Set width to 100% of the parent container */
+  height: 20%; /* Set height to 20% of the parent container */
+  padding: 10px; /* Add padding */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+  width: 70%; /* Set width to 70% of the parent container */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  border: 1px solid green; /* Add border with green color */
+  outline: none; /* Remove outline */
+}
+
+button {
+  width: 20%; /* Set width to 20% of the parent container */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background-color: #4caf50; /* Set background color */
+  color: white; /* Set text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
 }
